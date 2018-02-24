@@ -1,0 +1,93 @@
+.search{
+  height:88rpx;
+  width:100%;
+  border-bottom:1rpx solid #c1c1c1;
+  float:left;
+  background: #f4f4f4;
+}
+.search .go_search{
+  float: left;
+  width:692rpx;
+  height:58rpx;
+  border:1px solid #ededed;
+  margin:15rpx 15rpx;
+  border-radius:5px;
+  background: #fff;
+  background-size:26rpx 26rpx;
+  line-height: 58rpx;
+  color:#b2b2b2;
+  padding-left:50rpx;
+  position: relative;
+}
+.search .go_search image{
+  display: block;
+  width:30rpx;
+  height:30rpx;
+  position: absolute;
+  left:10rpx;
+  top:14rpx;
+}
+.go_search>input{
+  float: left;
+  width:600rpx;
+  height:56rpx;
+  font-size:26rpx;
+  border:none;
+  outline: none;
+}
+.input_style{
+  color:#b2b2b2;
+}
+.content{
+  height:calc(100% - 88rpx);
+  float:left;
+  padding-left:24rpx;
+}
+.info_list{
+  width:100%;
+  height:164rpx;
+  overflow: hidden;
+  border-bottom:1rpx solid #d8d8d8;
+}
+.info_item{
+  margin-top:22rpx;
+  width:100%;
+  height:120rpx;
+  position: relative;
+}
+.info_item>image{
+  float: left;
+  width:120rpx;
+  height:120rpx;
+  border-radius:50%;
+}
+.info_content{
+  float:left;
+  width:calc(100% - 120rpx);
+  overflow: hidden;
+  padding:0 20rpx;
+}
+.info_content>text:nth-child(1){
+  font-size:34rpx;
+  line-height: 46rpx;
+  width:100%;
+  overflow: hidden;
+  display: block;
+}
+.info_content>text:nth-child(2){
+  font-size:26rpx;
+  color:#B2B2B2;
+  line-height: 34rpx;
+  width:100%;
+  display: block;
+  height:68rpx;
+  overflow: hidden;
+}
+.act_he{
+  position: absolute;
+  font-size:28rpx;
+  right:16rpx;
+  top:0;
+  line-height: 46rpx;
+  color:#1dce6c;
+}

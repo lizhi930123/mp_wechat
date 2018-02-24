@@ -1,0 +1,36 @@
+<!--pages/quanzi_list/quanzi_list.wxml-->
+<view class="quanzi_container">
+  <scroll-view scroll-y bindscrolltolower="get_more_items" style="height:82%">
+    <block wx:for="{{items}}" wx:key="{{index}}">
+      <!--item开始 -->
+      <view class="quanzi_item" bindtouchstart="mytouchstart" bindtouchend="mytouchend" data-qid="{{item.circle._id}}" bindtap="f_enter_quanzi" bindlongtap="delete_clrcle">
+        <image src="{{item.circle.headimg}}" class="headerimg"></image>
+        <!--如果是我的圈子的话-->
+        <view class="quanzi_wrapper" wx:if="{{item.owner}}">
+          <view>
+            <text>{{item.circle.name}}</text>
+          </view>
+          <view class="my_quanzi">我的圈子</view>
+        </view>
+
+        <!--不是我的圈子的话-->
+        <view class="quanzi_wrapper" wx:else>
+          <view class="quanzi_name">{{item.circle.name}}</view>
+        </view>
+
+        <!--消息数量小于100的话-->
+        <view class="xiaoxi_num" wx:if="{{item.unread_count < 100&&item.unread_count>0}}">{{item.unread_count}}</view>
+        <!--消息数量大于等于100-->
+        <view class="xiaoxi_num jiujiu" wx:elif="{{item.unread_count}}">99+</view>
+      </view>
+      <!--item结束 -->
+    </block>
+  </scroll-view>
+
+  <!--创建圈子-->
+  <view class="create_quanzi">
+    <text class="see_code" bindtap="see_code">查看我的二维码</text>
+    <button type="primary" class="create_quanzi_btn" bindtap="create_quanzi">创建圈子</button>
+  </view>
+  <!--创建圈子结束-->
+</view>

@@ -1,0 +1,22 @@
+<view class="container">
+    <view class="search">
+        <view class="go_search">
+            <image src="../../image/index/search2.png"></image>
+            <input type="text" placeholder="请输入角色名称" placeholder-class="input_style" bindinput="findval"/>
+        </view>
+    </view>
+    <scroll-view scroll-y class="content">
+    <block wx:for="{{items}}">
+        <view class="right_item" class="info_list"  data-id="{{item._id}}" data-name="{{item.name}}" data-description="{{item.description}}" data-headimg="{{item.headimg}}" bindtap="act_he">
+            <view class="info_item">
+                <image src="{{item.headimg}}"></image>
+                <view class="info_content">
+                        <text>{{item.name}}</text>
+                        <text>{{item.description}}</text>
+                </view>
+                <text class="act_he">扮演TA</text>
+            </view>
+        </view>
+    </block>
+    </scroll-view>
+</view>

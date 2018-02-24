@@ -1,0 +1,59 @@
+/* pages/zan/zan.wxss */
+view {
+  box-sizing: border-box;
+}
+
+.zan_container {
+  width: 98%;
+  padding: 0 30rpx;
+}
+
+.zan_item {
+  display: flex;
+  position: relative;
+  height: 134rpx;
+  border-bottom: 1rpx solid #CCC;
+}
+
+.zan_item .headerimg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+}
+
+.item_detail {
+  display: flex;
+}
+
+.item_detail .left {
+  margin-left: 14rpx;
+  margin-top: 25rpx;
+}
+
+.item_detail .left .p_name {
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-size: 34rpx;
+}
+
+.item_detail .left .p_no {
+  color: rgb(131,131,131);
+  margin-top: 18rpx;
+  font-size: 26rpx;
+}
+
+.item_detail .right {
+  position: absolute;
+  right: 10rpx;
+  top: 25rpx;
+  color: rgb(131,131,131);
+  font-size: 26rpx;
+}
+
+.item_detail .right .p_delete {
+  margin-top: 18rpx;
+  text-align: right;
+}

@@ -1,0 +1,8 @@
+{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "我是明星",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#000"
+}

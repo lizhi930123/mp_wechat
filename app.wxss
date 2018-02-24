@@ -1,0 +1,14 @@
+/**app.wxss**/
+view,input,button,scroll-view{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color:#333;
+}
+page{
+    font-family: 'microsoft yahei';
+    height:100%;
+
+}
+.container{
+  overflow: hidden;
+}

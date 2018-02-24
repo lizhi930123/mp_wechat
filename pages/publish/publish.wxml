@@ -1,0 +1,25 @@
+<!--pages/post/post.wxml-->
+<view class="post_container">
+  <view class="post_detail">
+    <textarea placeholder="用扮演的角色写出这一刻你的想法" placeholder-style="font-size:30rpx; color:#B2B2B2;" focus="true" class="post_detail" maxlength="-1" bindinput="f_post_input" />
+  </view>
+
+
+  <view class="img_wrapper">
+    <view class="img_item" wx:for="{{imgUrls}}" wx:key="*this" bindtap="f_preview_img" data-imgurl="{{item}}">
+      <image src="{{item}}"></image>
+      <image src="../../image/publish/delete_img.png" class="delete_img" catchtap="f_delelte_img" data-imgurl="{{item}}"></image>
+    </view>
+    <view class="img_item" hidden="{{imgUrls.length==9}}">
+      <view class="add_img" bindtap="f_add_img">
+        <image src="../../image/creategroup/addimg.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="post_tip">
+    <view class="tip1">1. 用扮演身份发送, 不会曝光真实身份</view>
+    <view class="tip2">2. 邀请你的好友来一起扮演吧</view>
+  </view>
+  <button type="primary" bindtap="f_submit_post" class="button_publish">发布名人朋友圈</button>
+</view>

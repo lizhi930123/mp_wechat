@@ -1,0 +1,118 @@
+<!--pages/quanzi_xiaoxi/quanzi_xiaoxi.wxml-->
+<view class="xiaoxi_container">
+<block wx:for="{{items}}">
+  <!--点赞区域-->
+  <view class="zan" wx:if="{{item.type==1}}">
+    <view class="zan_info">
+      <image src="{{item.user.headimg}}"></image>
+      <view class="zan_whotime">
+        <view class="zan_who">
+          <text>{{item.user.name}}赞了你</text>
+        </view>
+        <view class="zan_time">
+          <text>{{item.time.create}}</text>
+        </view>
+      </view>
+      <view class="zan_delete" bindtap="f_delete_xiaoxi" data-msgid="{{item._id}}" data-index="{{index}}">删除</view>
+    </view>
+    <view class="zan_post" bindtap="f_see_detail" data-feedid="{{item.feed._id}}">
+      <image src="{{item.feed.photos[0].thumbnail}}" class="zan_content_img" wx:if="{{item.feed.photos?item.feed.photos.length:0}}"></image>
+      <view class="zan_content">
+        <text class="zan_author">{{item.feed.user.name}} : </text>
+        <text>{{item.feed.content}}</text>
+      </view>
+    </view>
+    <image src="../../image/home/liked.png" class="zan_logo_img"></image>
+  </view>
+  <!--点赞区域结束-->
+  <!--评论区域开始-->
+  <view class="comment" wx:if="{{item.type==0}}">
+    <view class="zan_info">
+      <image src="{{item.user.headimg}}"></image>
+      <view class="zan_whotime">
+        <view class="zan_who">
+          <text>{{item.user.name}} 评论了你</text>
+        </view>
+        <view class="zan_time">
+          <text>{{item.time.create}}</text>
+        </view>
+      </view>
+      <view class="zan_delete" bindtap="f_delete_xiaoxi" data-msgid="{{item._id}}" data-index="{{index}}">删除</view>
+    </view>
+    <view class="comment_content">
+      <text>{{item.content}}</text>
+    </view>
+    <view class="zan_post" bindtap="f_see_detail" data-feedid="{{item.feed._id}}">
+      <image src="{{item.feed.photos[0].thumbnail}}" class="zan_content_img" wx:if="{{item.feed.photos?item.feed.photos.length:0}}"></image>
+      <view class="zan_content">
+        <text class="zan_author">{{item.feed.user.name}} : </text>
+        <text>{{item.feed.content}}</text>
+      </view>
+    </view>
+    <image src="../../image/msg/comment.png" class="comment_logo_img"></image>
+  </view>
+  <!--评论区域结束-->
+  <!--回复区域开始-->
+  <view class="reply" wx:if="{{item.type==3}}">
+    <view class="zan_info">
+      <image src="{{item.user.headimg}}"></image>
+      <view class="zan_whotime">
+        <view class="zan_who">
+          <text>{{item.user.name}} 回复了你</text>
+        </view>
+        <view class="zan_time">
+          <text>{{item.time.create}}</text>
+        </view>
+      </view>
+      <view class="zan_delete" bindtap="f_delete_xiaoxi" data-msgid="{{item._id}}" data-index="{{index}}">删除</view>
+    </view>
+    <view class="comment_content">
+      回复
+      <text class="reply_author"> {{item.reply.name}} : </text>
+      <text>{{item.content}}</text>
+    </view>
+    <view class="zan_post" bindtap="f_see_detail" data-feedid="{{item.feed._id}}">
+      <image src="{{item.feed.photos[0].thumbnail}}" class="zan_content_img" wx:if="{{item.feed.photos?item.feed.photos.length:0}}"></image>
+      <view class="zan_content">
+        <text class="zan_author">{{item.feed.user.name}} : </text>
+        <text>{{item.feed.content}}</text>
+      </view>
+    </view>
+    <image src="../../image/msg/reply.png" class="reply_logo_img"></image>
+  </view>
+   <view class="reply" wx:if="{{item.type==30}}">
+    <view class="zan_info">
+      <image src="{{item.user.headimg}}"></image>
+      <view class="zan_whotime">
+        <view class="zan_who">
+          <text>该动态已被删除</text>
+        </view>
+        <view class="zan_time">
+          <text>{{item.time.create}}</text>
+        </view>
+      </view>
+      <view class="zan_delete" bindtap="f_delete_xiaoxi" data-msgid="{{item._id}}" data-index="{{index}}">删除</view>
+    </view>
+    <!-- <view class="comment_content">
+      回复
+    <text class="reply_author"> {{item.reply.name}} : </text>
+      <text>{{item.content}}</text>
+    </view> -->
+    <view class="zan_post" bindtap="f_see_detail" data-feedid="{{item.feed._id}}">
+      <image src="{{item.feed.photos[0].thumbnail}}" class="zan_content_img" wx:if="{{item.feed.photos?item.feed.photos.length:0}}"></image>
+      <view class="zan_content">
+        <text class="zan_author">{{item.feed.user.name}} : </text>
+        <text>{{item.feed.content}}</text>
+      </view>
+    </view>
+    <image src="../../image/msg/delete.png" class="reply_logo_img"></image>
+  </view>
+  <!--回复区域结束-->
+</block>
+</view>
+<!--<view class="vertical_line">
+    
+  </view>-->
+  <!--<image src="/images/zan.png" class="zan_logo_img"></image>
+    <image src="/images/comment.png" class="comment_logo_img"></image>
+    <image src="/images/reply.png" class="reply_logo_img"></image>-->

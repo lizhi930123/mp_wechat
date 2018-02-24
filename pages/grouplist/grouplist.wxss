@@ -1,0 +1,93 @@
+/**app.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+}
+.quanzi_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.quanzi_item {
+  display: flex;
+  position: relative;
+  height: 134rpx;
+}
+.quanzi_item .headerimg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  margin-left: 26rpx;
+}
+.quanzi_item .quanzi_wrapper {
+  width: 667rpx;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #aaa;
+}
+
+.quanzi_item:last-child .quanzi_wrapper {
+  border-bottom: none;
+}
+.quanzi_item:last-child{
+    border-bottom:1rpx solid #aaa;
+}
+
+.quanzi_wrapper .quanzi_name{
+  margin-top: 27rpx;
+}
+.quanzi_wrapper .my_quanzi {
+  font-size: 24rpx;
+  color: rgb(200, 200, 200);
+  background: rgb(244, 244, 244);
+  width: 120rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 12rpx;
+}
+
+.quanzi_item .xiaoxi_num {
+  background: red;
+  color: white;
+  position: absolute;
+  right: 25rpx;
+  top: 45rpx;
+
+  font-size: 28rpx;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+
+  text-align: center;
+  border-radius: 50%;
+}
+
+.quanzi_item .jiujiu {
+  width: 80rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+
+  border-radius: 25rpx;
+}
+
+.create_quanzi {
+  position: absolute;
+  bottom: 35rpx;
+  width: 100%;
+}
+
+.create_quanzi button {
+  width: 90%;
+}
+.see_code{
+  display: block;
+  width:100%;
+  text-align: center;
+  font-size:30rpx;
+  color:#777;
+  margin-bottom: 20rpx;
+  text-decoration: underline;
+}

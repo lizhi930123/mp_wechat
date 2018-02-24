@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTitleText": "创建圈子",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#000"
+}

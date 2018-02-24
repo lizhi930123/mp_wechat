@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/jump/jump",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/entercircle/entercircle",
+    "pages/msg/msg",
+    "pages/likelist/likelist",
+    "pages/grouplist/grouplist",
+    "pages/details/details",
+    "pages/mainpage/mainpage",
+    "pages/creategroup/creategroup",
+    "pages/share/share",
+    "pages/publish/publish",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "我是明星",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh":false,
+    "backgroundColor":"#000"
+  } 
+}

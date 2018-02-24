@@ -1,0 +1,62 @@
+/* pages/post/post.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+.post_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.post_detail textarea {
+  width: 670rpx;
+  margin:0 auto;
+  height: 220rpx;
+  font-size: 30rpx;
+  margin-top:40rpx;
+}
+
+.img_wrapper {
+  margin-top: 20rpx;
+  display: flex;
+  margin-left: 15rpx;
+  flex-wrap: wrap;
+}
+
+.img_wrapper .img_item {
+  margin-left: 16rpx;
+  position: relative;
+}
+
+.img_wrapper .img_item image {
+  width: 162rpx;
+  height: 162rpx;
+}
+
+.img_wrapper .img_item image.delete_img {
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.post_tip {
+  position: absolute;
+  bottom:152rpx;
+  margin-top: 120rpx;
+  padding-left:40rpx;
+  font-size: 26rpx;
+  color: #777777;
+}
+button {
+  width:670rpx;
+  height:96rpx;
+  line-height: 96rpx;
+  position: absolute;
+  bottom:36rpx;
+  left:50%;
+  margin-left:-335rpx;
+  font-size:36rpx;
+}

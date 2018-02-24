@@ -1,0 +1,10 @@
+<!--pages/quanzi_list/quanzi_list.wxml-->
+<view class="container">
+<text>请输入圈子口令</text>
+<view class="password">
+<input class="child1" maxlength="1"  type="number" bindinput="checkval1"/>
+<input class="child2"  maxlength="1"  type="number" focus="{{fo1}}" bindinput="checkval2"/>
+<input class="child3"  maxlength="1" type="number" focus="{{fo2}}" bindinput="checkval3"/>
+</view>
+<button type="primary" bindtap="enter">进入圈子</button>
+</view>

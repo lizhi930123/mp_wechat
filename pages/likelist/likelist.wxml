@@ -1,0 +1,18 @@
+<!--pages/zan/zan.wxml-->
+<view class="zan_container">
+  <!--列表项 -->
+  <view class="zan_item" wx:for="{{items}}" wx:key="{{item._id}}">
+    <image src="{{item.headimg}}" class="headerimg"></image>
+
+    <view class="item_detail">
+      <view class="left">
+        <view class="p_name">{{item.name}}</view>
+        <view class="p_no">NO.{{item.no}}</view>
+      </view>
+      <view class="right">
+        <view class="p_time">{{item.time.create}}</view>
+        <view class="p_delete" wx:if="{{me}}" bindtap="f_delete_zan" data-user="{{item}}" data-index="{{index}}">删除</view>
+      </view>
+    </view>
+  </view>
+</view>

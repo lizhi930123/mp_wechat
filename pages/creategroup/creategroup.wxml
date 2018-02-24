@@ -1,0 +1,7 @@
+<view bindtap="checkimage" class="addimage">
+    <image src="../../image/creategroup/addimg.png" wx:if="{{!imagesrc}}"></image>
+    <image src="{{imagesrc}}" class="addimgshow" wx:else></image>
+</view>
+<input class="groupname" placeholder="填写圈子名称（2-10个字)" placeholder-style="color:#b2b2b2" bindinput="checkval"/>
+<button class="quanzi_no" id="{{quanzi}}" bindtap="surecreate">创建圈子</button>
+<text class="tishi">一个用户只能创建一个圈子</text>

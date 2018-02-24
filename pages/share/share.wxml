@@ -1,0 +1,4 @@
+<view class="container">
+<canvas canvas-id="myCanvas"/>
+<button bindtap="saveimg" class="but">保存二维码</button>
+</view>

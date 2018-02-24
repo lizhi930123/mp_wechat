@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+<view class="search">
+      <view class="go_search" bindtap="f_focus"><image src="../../image/index/search2.png"></image>搜索你想扮演的名人</view>
+</view>
+<view class="content"  hidden="{{content_active}}">
+      <scroll-view scroll-y class="left">
+      <block wx:for="{{array}}">
+      <view class="{{active[index]}}" data-index="{{index}}" bindtap="check_white" data-id="{{item.id}}">
+            {{item.name}}
+      </view>
+      </block>
+      </scroll-view>
+      <scroll-view scroll-y enable-back-to-top lower-threshold="50" bindscrolltolower="get_more_act" class="right">
+      <block wx:for="{{items}}">
+            <view class="right_item" class="info_list" data-id="{{item._id}}" data-name="{{item.name}}" data-description="{{item.description}}" data-headimg="{{item.headimg}}" bindtap="go_act">
+                  <view class="info_item">
+                        <image src="{{item.headimg}}"></image>
+                        <view class="info_content">
+                              <text>{{item.name}}</text>
+                              <text>{{item.description}}</text>
+                        </view>
+                        <text class="act_he">扮演TA</text>
+                  </view>
+            </view>
+      </block>
+      </scroll-view>
+</view>
+<view class="check_actname" wx:if="{{actinfo.name}}">
+      <view class="act_content">
+            <image src="{{actinfo.headimg}}" class="act_headimg"></image>
+            <text class="act_name">{{actinfo.name}}</text>
+            <scroll-view scroll-y class="act_description">{{actinfo.description}}</scroll-view>
+            <text class="tuijian_headimg">推荐头像</text>
+            <scroll-view scroll-x lower-threshold="50" bindscrolltolower="get_more_headimg" class="headimg_items">
+            <view style="width:{{head_img_items.length*90+'rpx'}}">
+              <image wx:for="{{head_img_items}}" src="{{item.headimg}}" style="border:{{head_img_index==index?'2rpx solid #1DCE6C;':''}}" bindtap="check_headimg" data-index="{{index}}"></image>
+            </view>
+            </scroll-view>
+            <view class="act_button">
+                  <button bindtouchstart="startcancel" bindtouchend="overcancel" class="{{cancelactive}}" bindtap="cancelact">取消</button>
+                  <button bindtouchstart="startsure" bindtouchend="oversure"  class="{{sureactive}}" bindtap="sureact">确定</button>
+            </view>
+      </view>
+</view>
+</view>
